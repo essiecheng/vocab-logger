@@ -4,13 +4,13 @@ A command-line vocabulary logger and quizzer for Chinese learners. Save words yo
 
 ## Usage
 
-Install the tool:
+### Install the tool:
 
 ```
 uv add "git+https://github.com/essiecheng/vocab-logger.git"
 ```
 
-**Add a word/phrase** — pinyin and definition are added by the tool automatically:
+### Add a word/phrase (pinyin and definition are added by the tool automatically):
 
 ```bash
 vocab add "有备而来"
@@ -29,7 +29,7 @@ Tag a word/phrase with its source in which you discovered it for context:
 vocab add "有备而来" --tags "对方可是有备而来，我们千万不可掉以轻心"
 ```
 
-**List words:**
+### List words:
 
 ```bash
 # all words
@@ -40,7 +40,7 @@ vocab list --recent 10
 vocab list --random 10
 ```
 
-**Quiz yourself:**
+### Quiz yourself:
 
 ```bash
 # 10 random questions (shows characters, you type definition)
@@ -53,14 +53,14 @@ vocab quiz --recent 10
 vocab quiz --mode definition
 ```
 
-**See your stats:**
+### See your stats:
 
 ```bash
 vocab stats
 # → overall accuracy, words quizzed, and your hardest words
 ```
 
-**Remove a word:**
+### Remove a word:
 
 ```bash
 vocab remove "有备而来"

@@ -149,8 +149,28 @@ def quiz(
 
 @app.command()
 def stats():
-    """Show stats."""
-    print("stats")
+    """Show overall stats and your hardest words."""
+    words = load_words()
+    if not words:
+        rprint("[dim]No words yet.[/dim]")
+        raise typer.Exit()
+
+    attempted = [w for w in words if w.quiz_attempts > 0]
+    total_correct = sum(w.quiz_correct for w in attempted)
+    total_attempts = sum(w.quiz_attempts for w in attempted)
+    overall = f"{total_correct / total_attempts:.0%}" if total_attempts else "—"
+
+    rprint(f"\n[bold]Stats[/bold]")
+    rprint(f"  Total words:      {len(words)}")
+    rprint(f"  Words quizzed:    {len(attempted)}")
+    rprint(f"  Overall accuracy: {overall}")
+
+    if attempted:
+        hardest = sorted(attempted, key=lambda w: w.quiz_correct / w.quiz_attempts)[:5]
+        rprint("\n[bold]Hardest words:[/bold]")
+        for w in hardest:
+            rprint(f"  [cyan]{w.hanzi}[/cyan]  {w.pinyin}  —  {w.definition}  [dim]({w.quiz_correct}/{w.quiz_attempts})[/dim]")
+    rprint()
 
 
 def main():

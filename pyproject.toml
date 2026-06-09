@@ -2,7 +2,7 @@
 name = "vocab-logger"
 version = "0.1.0"
 description = "Vocabulary logger and quizzer for Chinese language learners"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 dependencies = [
     "openai>=2.41.0",
     "rich>=15.0.0",

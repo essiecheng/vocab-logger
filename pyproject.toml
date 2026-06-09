@@ -1,0 +1,20 @@
+[project]
+name = "vocab-logger"
+version = "0.1.0"
+description = "Chinese vocabulary logger and quizzer for language learners"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=2.41.0",
+    "rich>=15.0.0",
+    "typer[all]>=0.26.7",
+]
+
+[project.scripts]
+vocab = "vocab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vocab"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

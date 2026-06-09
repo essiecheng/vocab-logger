@@ -10,6 +10,14 @@ A command-line vocabulary logger and quizzer for Chinese language learners. Save
 uv add "git+https://github.com/essiecheng/vocab-logger.git"
 ```
 
+An OpenAI API key is required for automatic pinyin and definition lookup. Set it in your environment:
+
+```bash
+export OPENAI_API_KEY="sk-..."
+```
+
+You can also add words manually with `--pinyin` and `--definition` if you don't have a key.
+
 ### Add a word/phrase (pinyin and definition are added by the tool automatically):
 
 ```bash
@@ -17,7 +25,7 @@ vocab add "有备而来"
 # → Added: 有备而来 — yǒu bèi ér lái — come fully prepared
 ```
 
-Override the auto-generated fields:
+Override the auto-generated fields and/or manually add pinyin and definition:
 
 ```bash
 vocab add "有备而来" --pinyin "yǒu bèi ér lái" --definition "idiom that translates to 'to come prepared'"

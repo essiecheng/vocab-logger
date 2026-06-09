@@ -1,6 +1,6 @@
 # vocab-logger
 
-A command-line vocabulary logger and quizzer for Chinese learners. Save words you encounter outside of class (e.g. watching TV shows, reading, conversations) and quiz yourself on them later. All stored in one central structured place so you can actually go back and study them.
+A command-line vocabulary logger and quizzer for Chinese language learners. Save words you encounter outside of class (e.g. watching TV shows, reading, conversations) and quiz yourself on them later. All stored in one central structured place so you can actually go back and study them.
 
 ## Usage
 
